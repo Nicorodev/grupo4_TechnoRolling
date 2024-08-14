@@ -1,0 +1,139 @@
+
+
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+html {
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+   scroll-padding-top:100px ;
+ } 
+ 
+:root{
+   --primari:#161b33;
+   --secundary:#474973;
+   --terciary:#0d0c1d ;
+   --letras:#a69cac;
+}
+/*  HEADER  */
+
+/* index.css */
+/* index.css */
+#header .navbar {
+   background-color: var(--primari) !important;
+}
+
+#menu_hamburgesa{
+   color: var(--letras) !important;
+}
+#header .navbar-toggler-icon{
+   background-color: #a69cac;
+   border-radius: 5px;
+   padding: 14px;
+}
+
+
+#header .navbar-brand,
+#header .nav-link,
+#header .dropdown-item
+#header {
+   color: #a69cac ;
+   font-weight: 500;
+   font-family: Helvetica, sans-serif;
+   font-size: 1.5rem;
+}
+
+
+
+/* FIN HEADER  */
+
+
+/*  MAIN*/
+#main {
+   background-color: var(--secundary);
+}
+
+#destacados h2{
+   color: var(--letras);
+   font-weight: 600;
+   padding: 0 0 14px 0;
+   font-size: 3rem;
+
+   font-family:  Helvetica;
+}
+#destacados .card {
+   border-radius: 17px;
+   /* width: 19rem; */
+   /* margin: 8px; */
+   transition: transform 0.3s, opacity 0.3s ease;
+   -webkit-box-shadow: -9px 9px 23px 3px rgba(0, 0, 0, 0.62);
+   -moz-box-shadow: -9px 9px 23px 3px rgba(0, 0, 0, 0.62);
+   box-shadow: -9px 9px 23px 3px rgba(0, 0, 0, 0.62);
+   background-color: rgba(255, 255, 255, 0.165);
+ }
+ 
+ #destacados.card img {
+   width: 100%;
+   object-fit: cover;
+   border-radius: 17px 17px 20px 20px;
+   /* border-top-left-radius: 10px; */
+   /* border-top-right-radius: 10px; */
+ }
+ 
+ .card:hover {
+   transform: scale(1.06);
+ }
+ 
+ .card .card-body {
+   width: 100%;
+ }
+ 
+ .card .card-body h5 {
+   font-size: 2rem;
+   font-family: Helvetica;
+   font-weight: 700;
+ color: var(--letras);
+ }
+ 
+ .card .card-body p {
+   font-size: 1.3rem;
+   font-family: Helvetica;
+ color: #121212;
+ font-weight: 900;
+ }
+ 
+ 
+ .card-body .btn {
+   text-decoration: none;
+   color: white;
+   width: 100%;
+   font-weight: 800;
+   background-color: var(--primari);
+   border-radius: 10px;
+   border: 1px solid var(--primari);
+ }
+ 
+ .card .btn:hover {
+   background-color: #0d0c1dab;
+   border: 1px solid var(--primari);
+ }
+
+
+
+
+
+ 
+
+/*  FIN MAIN*/
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+   .navbar .form-control {
+       width: 100%;
+       max-width: 300px;
+       margin: 0 auto;
+   }
+}
