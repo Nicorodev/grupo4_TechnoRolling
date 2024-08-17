@@ -1,53 +1,58 @@
-// Simulación de productos cargados desde la página de administración
+let productosRow = document.querySelector('.row');
+let searchInput = document.querySelector('#search'); // Suponiendo que tienes un input con este ID para buscar
+let mensajeNoProductos = document.createElement('p'); // Creamos un elemento <p> para mostrar el mensaje
 
-  
-  // Función para mostrar productos
-  function mostrarProductos(productos) {
-    const productList = document.querySelector("#destacados .row");
-    productList.innerHTML = ""; // Limpiar contenido previo
-  
-    productos.forEach((producto) => {
-      const productItem = document.createElement("div");
-      productItem.classList.add("col");
-  
-      // Verificar si la imagen está vacía y proporcionar una imagen por defecto
-      const imagenProducto = producto.imagen
-        ? producto.imagen
-        : "https://via.placeholder.com/150"; // Imagen por defecto
-  
-      productItem.innerHTML = `
+mensajeNoProductos.textContent = "No hay productos relacionados";
+mensajeNoProductos.style.display = 'none'; // Ocultamos el mensaje por defecto
+mensajeNoProductos.style.color = 'red'; // Puedes estilizar el mensaje como prefieras
+productosRow.parentElement.appendChild(mensajeNoProductos); // Añadimos el mensaje al DOM, debajo del contenedor de productos
+
+const crearProductos = (productos) => {
+  const { id, nombre, imagen, precio } = productos;
+
+  return /* html */`
         <div class="col">
-          <div class="card ">
-              <img src="${imagenProducto}" class="card-img-top" alt="${producto.nombre}" />
+          <div class="card">
+              <div class="container-IMG">
+              <img src="${imagen}" class="card-img-top" alt="user" />
+              </div>
               <div class="card-body">
-                  <h5 class="card-title">${producto.nombre}</h5>
-                  <p class="card-text">${producto.categoria}</p>
-                  <a href="#" class="btn btn-primary">COMPRAR</a>
+                  <h5 class="card-title">${nombre}</h5>
+                  <p class="card-text">$ ${precio}</p>
+                  <a href="#" class="btn btn-primary" data-id="${id}">Añadir al carrito</a>
               </div>
           </div>
         </div>`;
-      productList.appendChild(productItem);
-    });
+};
+
+const renderizarProductos = (listaDeProductos) => {
+  productosRow.innerHTML = listaDeProductos.map(crearProductos).join('');
+};
+
+const filtrarProductos = (termino) => {
+  const terminoLower = termino.toLowerCase();
+  const productosFiltrados = productos.filter((producto) =>
+    producto.nombre.toLowerCase().includes(terminoLower) ||
+    producto.categoria.toLowerCase().includes(terminoLower)
+  );
+
+  if (productosFiltrados.length === 0) {
+    mensajeNoProductos.style.display = 'block'; // Mostramos el mensaje
+    productosRow.innerHTML = ''; // Limpiamos el contenedor de productos
+  } else {
+    mensajeNoProductos.style.display = 'none'; // Ocultamos el mensaje si hay productos
+    renderizarProductos(productosFiltrados);
   }
-  
-  // Mostrar todos los productos destacados al cargar la página
-  mostrarProductos(productos);
-  
-  // Filtrar productos por nombre al realizar la búsqueda
-  document.getElementById("form-search").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const searchTerm = document
-      .getElementById("search") // Cambiado de 'searchInput' a 'search'
-      .value.trim()
-      .toLowerCase();
-  
-    const productosFiltrados = productos.filter((producto) =>
-      producto.nombre.toLowerCase().includes(searchTerm)
-    );
-  
-    mostrarProductos(productosFiltrados);
-  });
-  
+};
+
+searchInput.addEventListener('input', (e) => {
+  filtrarProductos(e.target.value);
+});
 
 
-  
+
+const iniciar = () => {
+  renderizarProductos(productos);
+};
+
+iniciar();

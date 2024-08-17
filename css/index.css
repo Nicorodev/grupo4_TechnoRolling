@@ -18,6 +18,29 @@ html {
    --terciary:#0d0c1d ;
    --letras:#a69cac;
 }
+
+::-webkit-scrollbar {
+  width: 9px; /* Ancho de la barra de desplazamiento vertical */
+  height: 12px; /* Alto de la barra de desplazamiento horizontal */
+}::-webkit-scrollbar-track {
+  background: var(--terciary); /* Color de fondo del track */
+  border-radius: 5px; /* Bordes redondeados */
+}::-webkit-scrollbar-thumb {
+  background-color: var(--secundary); /* Color del thumb */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 2px solid var(--letras); /* Espacio alrededor del thumb */
+}
+
+
+/*body*/
+ body{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+ }
+/*fin body*/
+
 /*  HEADER  */
 
 /* index.css */
@@ -46,39 +69,204 @@ html {
    font-size: 1.5rem;
 }
 
+.container-fluid i{
+  color: white;
+  
+}
 
 
 /* FIN HEADER  */
 
 
 /*  MAIN*/
+
 #main {
    background-color: var(--secundary);
+   width: 100%;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+#setup{
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  padding: 20px;
+  flex-direction: column;
+  width: 100%; 
+  gap: 10px;
+}
+
+#setup .setup-text{
+  /* font-size: 48px; */
+  /* font-weight: 800; */
+ width: 100%; 
+  flex: 1;
+}
+
+#setup .setup-text h1{
+  margin: 0;
+padding: 0;
+font-family: Helvetica;
+font-size: 2rem;
+background: linear-gradient(to top, #30cfd0, #c43ad6);
+background-clip: text;
+color: transparent;
+-webkit-background-clip: text;
+font-weight: 800;
+ margin-bottom: 10px;
+ animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
+}
+
+#setup .setup-text h1 span{
+  position: relative;
+    background: linear-gradient(to top, #30cfd0, #c43ad6);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+#setup .setup-text h1 span::before,
+#setup .setup-text h1 span::after {
+  content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+#setup .setup-text h1 span::before {
+  background-color: var(#02050e);
+    /*animacion - duración - delay - animation-function - forwards para que se quede en el final*/
+    animation: typewriter 1.2s 1.4s steps(6) forwards;
+}
+
+#setup .setup-text h1 span::after {
+  width: 0.1rem;
+    background: linear-gradient(to top, #30cfd0, #c43ad6);
+    animation: typewriter 1.2s 1.4s steps(6) forwards,
+      blink 0.8s steps(6) infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#setup .setup-IMG{
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  transition: transform 1s ease, 
+  box-shadow 1s ease;
+}
+.IMG1{
+  width: 50%;
+}
+
+
+
+.IMG2{
+  width: 50%;
+}
+
+#setup .setup-IMG img{
+  width: 100%;
+  height: 100% ;
+  object-fit: cover;
+  border-radius: 10px;
+ }
+
+
+
+
+#setup .setup-IMG img:hover{
+  transform: scale(0.1);
+ transform: translate(0, 1px);
+  box-shadow: 10px -10px 25px 0 rgba(16, 226, 253, 0.5), -10px 10px 25px 0 rgba(183, 0, 255, 0.794);
+}
+
+
 
 #destacados h2{
-   color: var(--letras);
-   font-weight: 600;
-   padding: 0 0 14px 0;
-   font-size: 3rem;
-
-   font-family:  Helvetica;
+  /* color: var(--letras); */
+  background: linear-gradient(to top, #30cfd0, #c43ad6);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 700;
+  font-family:  Helvetica;
+  font-size: 2rem;
+  margin-bottom: 19px;
+  padding-bottom: 10px;
+  position: relative;
+  /* border-bottom: 2px solid linear-gradient(to top right, #B066FE, #63E2FF);; */
 }
+
+/* #destacados h2:hover{
+  background-image: linear-gradient(to top right, #B066FE, #63E2FF);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+#destaccados h2::after{
+  content: '';
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to top right, #B066FE, #63E2FF);
+} */
+
 #destacados .card {
    border-radius: 17px;
-   /* width: 19rem; */
-   /* margin: 8px; */
+   /* max-width: 150px;
+   max-height:auto ; */
    transition: transform 0.3s, opacity 0.3s ease;
    -webkit-box-shadow: -9px 9px 23px 3px rgba(0, 0, 0, 0.62);
    -moz-box-shadow: -9px 9px 23px 3px rgba(0, 0, 0, 0.62);
    box-shadow: -9px 9px 23px 3px rgba(0, 0, 0, 0.62);
    background-color: rgba(255, 255, 255, 0.165);
+   
  }
- 
- #destacados.card img {
+ #destacados .container-IMG{
    width: 100%;
+   height: 200px;
+   height: auto;
+   margin-right: 20px;
    object-fit: cover;
-   border-radius: 17px 17px 20px 20px;
+   border-radius: 17px 17px 0px 0px;
+ }
+ #destacados .card img {
+   width: 100%;
+   height: 100%;
+   margin-right: 20px;
+   object-fit: cover;
+   border-radius: 17px 17px 0px 0px;
    /* border-top-left-radius: 10px; */
    /* border-top-right-radius: 10px; */
  }
@@ -89,23 +277,33 @@ html {
  
  .card .card-body {
    width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 5px;
  }
  
  .card .card-body h5 {
    font-size: 2rem;
    font-family: Helvetica;
-   font-weight: 700;
- color: var(--letras);
+   font-weight: 690;
+   color: var(--letras);
+   flex: 1;
  }
  
  .card .card-body p {
-   font-size: 1.3rem;
+   font-size: 2rem;
    font-family: Helvetica;
  color: #121212;
  font-weight: 900;
  }
  
- 
+ .card .card-body h5, 
+ .card .card-body p{
+  margin: 0;
+  padding: 0;
+ }
  .card-body .btn {
    text-decoration: none;
    color: white;
@@ -114,11 +312,14 @@ html {
    background-color: var(--primari);
    border-radius: 10px;
    border: 1px solid var(--primari);
+ 
  }
  
+
  .card .btn:hover {
    background-color: #0d0c1dab;
    border: 1px solid var(--primari);
+   
  }
 
 
@@ -130,10 +331,15 @@ html {
 /*  FIN MAIN*/
 
 
-@media (min-width: 768px) and (max-width: 991px) {
-   .navbar .form-control {
-       width: 100%;
-       max-width: 300px;
-       margin: 0 auto;
+@media (min-width: 768px){
+   #destacados{
+    max-width: 630px;
+   }
+}
+
+
+@media (min-width: 1024px){
+   #destacados{
+    max-width: 990px;
    }
 }
