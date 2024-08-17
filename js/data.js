@@ -1,4 +1,4 @@
-const productos = [
+const listaProductos = [
     {
       id: 1,
       nombre: "Procesador Amd Ryzen 7 8700F Sin Video AM5",
@@ -168,3 +168,18 @@ const productos = [
       precio: 20000 
     }
   ];
+
+  const dividirProdutosEnPartes = (size) => {
+    let listaDeProductos = [];
+    for (let i = 0; i < listaProductos.length; i += size) {
+        listaDeProductos.push(listaProductos.slice(i, i + size));
+    }
+    return listaDeProductos;
+};
+
+  const limiteDeProductos = {
+    productos: dividirProdutosEnPartes(6),
+    limiteDeProductos: dividirProdutosEnPartes(6).length,
+    productosIndex: 0,
+    filtroActivado: null,
+  }

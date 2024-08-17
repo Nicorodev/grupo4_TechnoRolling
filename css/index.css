@@ -114,66 +114,61 @@ font-size: 2rem;
 background: linear-gradient(to top, #30cfd0, #c43ad6);
 background-clip: text;
 color: transparent;
--webkit-background-clip: text;
 font-weight: 800;
  margin-bottom: 10px;
+}
+
+/*animacion al h1*/
+
+#setup .setup-text h1{
  animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
+}
+
+@keyframes blink {
+  to{
+    background-color: transparent;
+    opacity: 0;
+  }
+}
+
+@keyframes typeWriter {
+
+  to{
+    left: 100%;
+  }
 }
 
 #setup .setup-text h1 span{
   position: relative;
-    background: linear-gradient(to top, #30cfd0, #c43ad6);
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
+  background: linear-gradient(to top, #30cfd0, #c43ad6);
+  background-clip: text;
+  color: transparent;
+  --webkit-background-clip: text;
 }
+
 #setup .setup-text h1 span::before,
-#setup .setup-text h1 span::after {
-  content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-#setup .setup-text h1 span::before {
-  background-color: var(#02050e);
-    /*animacion - duración - delay - animation-function - forwards para que se quede en el final*/
-    animation: typewriter 1.2s 1.4s steps(6) forwards;
+#setup .setup-text h1 span::after{
+content: "";
+/* background-color: red; */
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
 }
 
-#setup .setup-text h1 span::after {
-  width: 0.1rem;
-    background: linear-gradient(to top, #30cfd0, #c43ad6);
-    animation: typewriter 1.2s 1.4s steps(6) forwards,
-      blink 0.8s steps(6) infinite;
+#setup .setup-text h1 span::before{
+  background: var(--secundary);
+  /* background-color: red; */
+  animation: typeWriter 1.2s 0s steps(11) forwards;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#setup .setup-text h1 span::after{
+  width: 1.6px;
+  background: linear-gradient(to top, #30cfd0, #c43ad6);
+  animation: typeWriter 1.2s 0s steps(11) forwards, blink .8s steps(11) infinite;
+  
+}
 
 #setup .setup-IMG{
   width: 100%;
@@ -186,8 +181,6 @@ font-weight: 800;
   width: 50%;
 }
 
-
-
 .IMG2{
   width: 50%;
 }
@@ -199,16 +192,11 @@ font-weight: 800;
   border-radius: 10px;
  }
 
-
-
-
 #setup .setup-IMG img:hover{
   transform: scale(0.1);
  transform: translate(0, 1px);
   box-shadow: 10px -10px 25px 0 rgba(16, 226, 253, 0.5), -10px 10px 25px 0 rgba(183, 0, 255, 0.794);
 }
-
-
 
 #destacados h2{
   /* color: var(--letras); */
@@ -222,25 +210,30 @@ font-weight: 800;
   margin-bottom: 19px;
   padding-bottom: 10px;
   position: relative;
-  /* border-bottom: 2px solid linear-gradient(to top right, #B066FE, #63E2FF);; */
+  /* border-color: 2px solid linear-gradient(to top right, #B066FE, #63E2FF); */
 }
 
-/* #destacados h2:hover{
-  background-image: linear-gradient(to top right, #B066FE, #63E2FF);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+#destacados .categoriasProductos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin: 10px 30px 10px 30px;
 }
-
-#destaccados h2::after{
-  content: '';
-  height: 2px;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  background-image: linear-gradient(to top right, #B066FE, #63E2FF);
-} */
+#destacados .categoriasProductos .categorias{
+  background: var(--primari);
+  color: var(--letras);
+  font-weight: 600;
+  font-family: Helvetica;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+}
 
 #destacados .card {
    border-radius: 17px;
@@ -250,9 +243,29 @@ font-weight: 800;
    -webkit-box-shadow: -9px 9px 23px 3px rgba(0, 0, 0, 0.62);
    -moz-box-shadow: -9px 9px 23px 3px rgba(0, 0, 0, 0.62);
    box-shadow: -9px 9px 23px 3px rgba(0, 0, 0, 0.62);
-   background-color: rgba(255, 255, 255, 0.165);
-   
+   background-color: rgba(255, 255, 255, 0.165)
  }
+#destacados .categoriasProductos .activado{
+  background:#1e50ff;
+  color: white;
+}
+
+#destacados .verMas {
+  margin:40px 0 30px 0;
+  background: var(--primari);
+  color: var(--letras);
+  font-weight: 600;
+  font-family: Helvetica;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+
+#destacados .verMas:hover{
+  background: #1e50ff;
+  color: white;
+}
  #destacados .container-IMG{
    width: 100%;
    height: 200px;

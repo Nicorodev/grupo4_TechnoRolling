@@ -1,6 +1,7 @@
 let productosRow = document.querySelector('.row');
 let searchInput = document.querySelector('#search'); // Suponiendo que tienes un input con este ID para buscar
 let mensajeNoProductos = document.createElement('p'); // Creamos un elemento <p> para mostrar el mensaje
+let verMas = document.querySelector('.verMas');
 
 mensajeNoProductos.textContent = "No hay productos relacionados";
 mensajeNoProductos.style.display = 'none'; // Ocultamos el mensaje por defecto
@@ -29,13 +30,13 @@ const renderizarProductos = (listaDeProductos) => {
   productosRow.innerHTML = listaDeProductos.map(crearProductos).join('');
 };
 
+/*FILTRAR PRODUCTOS  */
 const filtrarProductos = (termino) => {
   const terminoLower = termino.toLowerCase();
   const productosFiltrados = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(terminoLower) ||
     producto.categoria.toLowerCase().includes(terminoLower)
   );
-
   if (productosFiltrados.length === 0) {
     mensajeNoProductos.style.display = 'block'; // Mostramos el mensaje
     productosRow.innerHTML = ''; // Limpiamos el contenedor de productos
@@ -44,15 +45,22 @@ const filtrarProductos = (termino) => {
     renderizarProductos(productosFiltrados);
   }
 };
-
 searchInput.addEventListener('input', (e) => {
   filtrarProductos(e.target.value);
 });
 
 
+/*MOSTRAR MAS PRODUCTOS */
 
+let aumentarLimite = () => {
+   limiteDeProductos.productosIndex += 1;
+   let {productos, productosIndex} = limiteDeProductos
+   renderizarProductos(productos[productosIndex]);
+    
+}
 const iniciar = () => {
-  renderizarProductos(productos);
+  renderizarProductos(limiteDeProductos.productos[0]);
+  verMas.addEventListener('click', aumentarLimite);
 };
 
 iniciar();
