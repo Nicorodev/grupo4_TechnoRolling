@@ -50,12 +50,13 @@ searchInput.addEventListener('input', (e) => {
 });
 
 
-/*MOSTRAR MAS PRODUCTOS */
 
+
+/*MOSTRAR MAS PRODUCTOS */
 let aumentarLimite = () => {
    limiteDeProductos.productosIndex += 1;
    let {productos, productosIndex} = limiteDeProductos
-   renderizarProductos(productos[productosIndex]);
+   renderizarProductos(productos.slice(0, productosIndex).flat());
     
 }
 const iniciar = () => {
