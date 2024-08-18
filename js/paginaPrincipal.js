@@ -20,7 +20,7 @@ const crearProductos = (productos) => {
               <div class="card-body">
                   <h5 class="card-title">${nombre}</h5>
                   <p class="card-text">$ ${precio}</p>
-                  <a href="#" class="btn btn-primary" data-id="${id}">Añadir al carrito</a>
+                  <a href="#" class="btn btn-primary" data-id="${id}">VER PRODUCTO</a>
               </div>
           </div>
         </div>`;

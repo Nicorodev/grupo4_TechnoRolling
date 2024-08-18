@@ -29,7 +29,7 @@
     <title>TechnoRolling🖥</title>
   </head>
 
-  <body>
+  <body id="body">
     <header id="header" class="">
       <nav id="menu_hamburgesa"
         class="navbar navbar-expand-lg navbar-light bg-light text-center pt-2 pb-2"
@@ -51,18 +51,18 @@
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"
-                  >Sobre Nosotros</a
+                  >HOME</a
                 >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"
                   ><box-icon type="solid" name="file-txt"></box-icon
-                  >Contactarse</a
+                  >SOBRE NOSOTROS</a
                 >
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Precios</a>
-              </li>
+              </li> -->
             </ul>
             <form id="form-search" class="d-flex mx-auto mx-lg-0">
               <input
@@ -88,9 +88,10 @@
         </div>
       </nav>
     </header>
-    <main id="main" class="pb-3">
+    <main id="main" class="pb-3 d-flex justify-content-center align-items-center justify-content-center">
       <!-- Carousel -->
-      <div
+        <section id="carousel">
+          <div
         id="carouselExample"
         data-bs-ride="carousel"
         data-bs-interval="3000"
@@ -145,6 +146,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+        </section>
        <section id="setup">
         <div class="setup-text">
           <h1 class="text-center">Personaliza tu setup gamer con nuestros mejores <span>Perifericos</span></h1>
@@ -246,13 +248,12 @@
         </div>
         <button class="verMas">VER MAS</button>
       </section>
-      <section>
-       
-    
 
-      </section>
     </main>
-    <footer id="footer"></footer>
+    <!-- Footer -->
+    <footer id="footer">
+    <p>Hecho con ❤️ en TechnoRolling</p>
+    </footer>
     <!-- Modal -->
     <div
       class="modal fade"

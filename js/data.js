@@ -178,8 +178,8 @@ const listaProductos = [
 };
 
   const limiteDeProductos = {
-    productos: dividirProdutosEnPartes(6),
-    limiteDeProductos: dividirProdutosEnPartes(6).length,
+    productos: dividirProdutosEnPartes(5),
+    limiteDeProductos: dividirProdutosEnPartes(5).length,
     productosIndex: 0,
     filtroActivado: null,
   }
