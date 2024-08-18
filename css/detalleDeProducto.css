@@ -43,3 +43,24 @@ html {
  }
 
  /* FIN BODY */
+
+/* MAIN */
+
+#main{
+    background: var(--secundary);
+    width: 100%;
+}
+
+#detalleProducto{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#detalleProducto conteiner_image{
+    
+}
+
+
+/* FIN MAIN*/
+
