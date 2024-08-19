@@ -3,173 +3,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.btn-login {
-  background-color: #f539f2;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  align-self: center;
-  position: relative;
-  top: 50px;
-}
-
-.btn-login:hover {
-  background-color: rgb(150, 6, 133);
-}
-
-.search-form {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 150px;
-  padding: 30px 20px 0px 20px;
-}
-
-.search-form input[type="text"] {
-  padding: 8px;
-  border: none;
-  border-radius: 5px;
-  width: 90%;
-  position: relative;
-  top: 50px;
-}
-
-.search-form button {
-  padding: 8px 16px;
-  border: none;
-  background-color: #f539f2;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  position: relative;
-  top: 50px;
-}
-#login-btn a{
-  text-decoration: none !important;
-  color: aliceblue;
-}
-.search-form button:hover {
-  background-color: rgb(150, 6, 133);
-}
-
-@media (max-width: 768px) {
-  .nav-menu {
-      width: 100%;
-  }
-
-  .search-form {
-      margin-bottom: 20px;
-  }
-
-  .btn-login {
-      margin-top: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .search-form {
-      margin-bottom: 20px;
-  }
-
-  .search-form input[type="text"], .search-form button {
-      font-size: 0.9rem;
-      padding: 10px;
-  }
-
-  .btn-login {
-      width: 80%;
-      margin-top: 20px;
-  }
-}
-
-.about-us-section {
-  position: relative;
-  padding: 60px 20px;
-  background: #f0f0f0;
-}
-
-.hamburger {
-  cursor: pointer;
-  width: 40px;
-  height: 25px;
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  z-index: 1001;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hamburger .bar {
-  height: 4px;
-  width: 100%;
-  background-color: white;
-  transition: all 0.3s ease;
-  border-radius: 4px;
-}
-
-.nav-menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 30%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 999;
-  padding-top: 50px;
-  transform: translateX(100%);
-  transition: transform 0.5s ease;
-}
-
-.nav-menu.open {
-  display: block;
-  transform: translateX(0);
-}
-
-.nav-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-.nav-menu ul li {
-  margin: 30px 0;
-  display: flex;
-  justify-content: center;
-  gap: px;
-  width: 100%;
-  height: 100%;
-}
-
-.nav-menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.9rem;
-  transition: color 0.3s;
-  font-weight: 500;
-}
-
-.nav-menu ul li a:hover {
-  color: #f539f2;
-}
-
-.hamburger.open .bar:nth-child(1) {
-  transform: rotate(43deg) translate(5px, 5px);
-  width: 100%;
-}
-
-.hamburger.open .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.open .bar:nth-child(3) {
-  transform: rotate(-40deg) translate(10px, -10px);
-  width: 100%;
-}
 
 #about-us {
   background-color: #1a1a1a;
@@ -241,19 +74,6 @@ body {
       left: 5%;
   }
 
-  .nav-menu {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 60%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      z-index: 999;
-      padding-top: 60px;
-      transform: translateX(100%);
-      transition: transform 0.5s ease;
-  }
-
   #about-us-text {
       width: 100%;
       height: 100%;
@@ -289,18 +109,6 @@ body {
       top: 100px;
   }
 
-  .nav-menu {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 70%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      z-index: 999;
-      padding-top: 50px;
-      transform: translateX(100%);
-      transition: transform 0.5s ease;
-  }
 
   .desc.visible {
       opacity: 1;
@@ -320,20 +128,6 @@ body {
       font-size: 1rem;
   }
 
-  .nav-menu ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.5rem;
-      transition: color 0.3s;
-      font-weight: 500;
-  }
-
-  .nav-menu ul {
-      list-style: none;
-      padding: 0;
-      position: relative;
-      top: 50px;
-  }
 }
 
 #about-us-text {
@@ -498,28 +292,3 @@ body {
   padding-top: 10px;
 }
 
-@media (max-width: 768px) {
-  .footer h3 {
-      font-size: 1.6rem;
-  }
-
-  .footer-links .anc-footer {
-      margin: 10px 0;
-      padding: 5px 0;
-  }
-}
-
-@media (max-width: 576px) {
-  .footer h3 {
-      font-size: 1.4rem;
-  }
-
-  .footer-links .anc-footer {
-      margin: 5px 0;
-      padding: 10px 0;
-  }
-
-  .footer-links .anc-footer a {
-      font-size: 1rem;
-  }
-}

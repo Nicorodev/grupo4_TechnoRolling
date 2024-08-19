@@ -215,3 +215,75 @@ html {
     } */
 
 }
+
+.footer {
+    background: linear-gradient(to right, #1a1a1a, #333);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(150, 6, 133);
+  }
+  
+  .footer a {
+    color: rgb(252, 102, 234);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+  }
+  
+  .footer-links {
+    margin: 20px 0;
+  }
+  
+  .footer-links .anc-footer {
+    margin: 10px 0;
+  }
+  
+  .footer-links .anc-footer a {
+    font-size: 1.1rem;
+  }
+  
+  .footer-copyright {
+    font-size: 0.9rem;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer h3 {
+        font-size: 1.6rem;
+    }
+  
+    .footer-links .anc-footer {
+        margin: 10px 0;
+        padding: 5px 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .footer h3 {
+        font-size: 1.4rem;
+    }
+  
+    .footer-links .anc-footer {
+        margin: 5px 0;
+        padding: 10px 0;
+    }
+  
+    .footer-links .anc-footer a {
+        font-size: 1rem;
+    }
+  }
