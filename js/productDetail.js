@@ -55,7 +55,7 @@ productIdHTML.innerHTML += `
                        <p>Categoria: <span id="span">${product.categoria}</span></p>
                         <div class="precio">
                           <p>$<span>${product.precio}</span></p>
-                          <button class="comprar" src="">COMPRAR</button>
+                          <button class="comprar" src=""><a href="../pages/404.html">COMPRAR</a></button>
                         </div>
                         <div class="envios">
                           <i  class='bx bxs-truck bx-lg'></i>

@@ -15,7 +15,7 @@ html {
  
 :root{
    --primari:#161b33;
-   --secundary:#474973;
+   --secundary:#131524;
    --terciary:#0d0c1d ;
    --letras:#a69cac;
 }
@@ -48,8 +48,8 @@ html {
 
 #header {
   width: 100%;
-  position: fixed;
-  z-index: 999;
+  /* position: fixed; */
+  /* z-index: 999; */
   margin: 0 auto;
 }
 #header .navbar {
@@ -96,9 +96,12 @@ html {
   justify-content: center;
 }
 
+.desabilitar{
+  display: none;
+}
 #carousel {
   width: 100%;
-  margin: 42px 0 0 0; 
+  /* margin: 42px 0 0 0;  */
 }
 
 #setup{

@@ -1,35 +1,47 @@
+// // Selección del cuerpo de la tabla
 // let cuerpoTabla = document.querySelector("tbody");
 
+// function crearTabla(listaProductos) {
+//   // Limpiar el contenido de la tabla antes de rellenarla
+//   cuerpoTabla.innerHTML = '';
 
-// function crearTabla (){
+//   // Iterar sobre cada producto en el array
+//   listaProductos.forEach(product => {
+//     // Crear una nueva fila
+//     const tr = document.createElement('tr');
 
-//     let tabla = JSON.parse(localStorage.getItem("productId")) || [];
+//     // Crear las celdas de la fila con los datos del producto
+//     const celdas = `
+//       <td>${listaProductos.nombre}</td>
+//       <td>${product.descripcion}</td>
+//       <td>${product.stock}</td>
+//       <td>${product.precio}</td>
+//       <td>${product.categoria}</td>
+//       <td>${product.id}</td>
+//       <td><button data-id="${product.id}">Eliminar</button></td>
+//       <td><button data-id="${product.id}">Editar</button></td>
+//     `;
 
-//     /* RECORRER EL ARRAY */
-//     tabla.map((product) => {
+//     // Asignar las celdas a la fila
+//     tr.innerHTML = celdas;
 
-//         let tr = document.createElement("tr");
-
-//         let celdas =/*HTML */ `
-//              <td></td>${product.imagen}</td>
-//              <td></td>${product.descripcion}</td>
-//              <td></td>${product.nombre}</td>
-//              <td></td>${product.stock}</td>
-//              <td></td>${product.precio}</td>
-//              <td></td>${product.categoria}</td>
-//              <td></td>${product.id}</td>
-//              <td></td>
-//         `
-//           tr.innerHTML=celdas
-//           cuerpoTabla.append(tr)
-         
-//         // let tdId = document.createElement("td");
-//         // let tdNombre = document.createElement("td");
-//         // let tdImagen = document.createElement("td");
-//         // let tdPrecio = document.createElement("td");
-//         // let tdStock = document.createElement("td");
-//         // let tdDescripcion = document.createElement("td");
-//         // let tdEliminar = document.createElement("td");
-//         // let tdEditar = document.createElement("td");
-//     })
+//     // Añadir la fila al cuerpo de la tabla
+//     cuerpoTabla.appendChild(tr);
+//   });
 // }
+
+// // Ejemplo de uso con el array de productos
+// const listaProductos = [
+//   { id: 1, nombre: 'Producto 1', descripcion: 'Descripción del producto 1', stock: 10, precio: 100, categoria: 'Categoría 1' },
+//   // Agregar más productos según sea necesario
+// ];
+
+// // Llamada a la función para crear la tabla
+// crearTabla(listaProductos);
+
+
+let cuerpoTabla = document.querySelector("tbody");
+
+function crearTabla (){
+    
+}
